@@ -1,6 +1,6 @@
 module ApplicationHelper
   def title(page_title)
-    title = page_title.empty? ? "Ladies dress gents" : page_title
-    content_for(:title){ "LDG | #{title}" }
+    title = page_title.empty? ? "Gamerchanger" : page_title
+    content_for(:title){ "GCH | #{title}" }
   end
 end

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 
 gem 'rails', '4.2.5.1'
-gem 'pg', '~> 0.15'
+gem 'pg', '~> 0.18'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -20,6 +20,8 @@ gem 'mailgun_rails'
 gem 'wicked'
 gem 'friendly_id', '~> 5.1.0'
 
+gem 'figaro'
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development do
@@ -28,7 +30,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'thin'
   gem 'byebug'
   gem 'spring'
   gem 'dotenv-rails'
@@ -37,7 +38,4 @@ group :development, :test do
   gem 'minitest-reporters'
 end
 
-group :production do
-  gem 'rails_12factor'
-  gem 'puma'
-end
+gem 'puma'
