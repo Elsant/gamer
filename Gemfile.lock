@@ -272,7 +272,7 @@ DEPENDENCIES
   minitest-rails
   minitest-rails-capybara
   minitest-reporters
-  pg (~> 0.18)
+  pg
   puma
   quiet_assets
   rails (= 4.2.5.1)
