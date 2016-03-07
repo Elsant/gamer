@@ -65,6 +65,6 @@ test:
 #
 production:
   <<: *default
-  database: gamer_production
+  database: <%= ENV['GAMER_DATABASE_NAME'] %>
   username: <%= ENV['GAMER_DATABASE_USERNAME'] %>
   password: <%= ENV['GAMER_DATABASE_PASSWORD'] %>
