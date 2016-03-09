@@ -2,6 +2,8 @@
 .main-content
   = form_for @occasion, html: {class: "form-basic"} do |f|
     .form-title-row
+      =render "intro/logo"
+      =render "intro/info"
       h1 Create Occasion
 
     .form-row

@@ -2,6 +2,8 @@
 .main-content
   = form_for @sizeset ||= Sizeset.new, url: wizard_path, method: :put, html: {class: "form-basic"} do |f|
     .form-title-row
+      =render "logo"
+      =render "info"
       h1 Select Shirt Size
     .form-row
       label

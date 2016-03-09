@@ -1,27 +1,29 @@
 - title "Select Pants Fit" 
 .main-content
-    = form_for @style, url: wizard_path, method: :put, html: {class: "form-basic"} do |f|
-      .form-title-row
-        h1 Select Pants Fit
-      .form-row
-        label
-          span How do you like your pants to fit?
-        .form-radio-buttons
-          div
-            label
-              =f.radio_button :pants_fit, 0, :checked => true
-              span Slim
-          div
-            label
-              =f.radio_button :pants_fit, 1
-              span Straight
-          div
-            label
-              =f.radio_button :pants_fit, 2
-              span Relaxed
-      .form-row
-        = f.button "Next: Shops", :name => "Next: Shops"
+  = form_for @style, url: wizard_path, method: :put, html: {class: "form-basic"} do |f|
+    .form-title-row
+      =render "logo"
+      =render "info"
+      h1 Select Pants Fit
+    .form-row
+      label
+        span How do you like your pants to fit?
+      .form-radio-buttons
+        div
+          label
+            =f.radio_button :pants_fit, 0, :checked => true
+            span Slim
+        div
+          label
+            =f.radio_button :pants_fit, 1
+            span Straight
+        div
+          label
+            =f.radio_button :pants_fit, 2
+            span Relaxed
+    .form-row
+      = f.button "Next: Shops", :name => "Next: Shops"
 
-      =render "skip_this" 
+    =render "skip_this" 
 
          

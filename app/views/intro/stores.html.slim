@@ -1,20 +1,22 @@
 - title "Where do you like to shop?" 
 .main-content
-    = form_for @fav_store ||= FavStore.new , url: wizard_path, method: :put, html: {class: "form-basic"} do |f|
-      .form-title-row
-        h1 Where do you like to shop?
+  = form_for @fav_store ||= FavStore.new , url: wizard_path, method: :put, html: {class: "form-basic"} do |f|
+    .form-title-row
+      =render "logo"
+      =render "info"
+      h1 Where do you like to shop?
 
-      - stores_list.each_with_index do |store, i|
-        .form-row
-          label
-            span
-              = store
-            = f.check_box(:store, { :multiple => true }, i, nil)
-
+    - stores_list.each_with_index do |store, i|
       .form-row
-        = f.button "Next: Shirt Sizes", :name => "Next: Shirt Sizes"
+        label
+          span
+            = store
+          = f.check_box(:store, { :multiple => true }, i, nil)
 
-      =render "skip_this" 
+    .form-row
+      = f.button "Next: Shirt Sizes", :name => "Next: Shirt Sizes"
+
+    =render "skip_this" 
 
       
           
